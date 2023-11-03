@@ -10,13 +10,14 @@ import org.springframework.web.reactive.function.client.WebClient;
 /*
  * This app represents the actual API we build. The app that "punches" the external API in _1
  * We will see two examples:
- * Spring Cloud OpenFeign
+ * Spring Cloud OpenFeign (commented to allow correct working of WebClient) (the properties URL needs to remove the http part)
  * WebClient (WebFlux) REACTIVE!
+ * (we've added io.netty because in Mac launched an error)
  */
 
 @SpringBootApplication
 @ComponentScan(basePackages={"controllers","webclient"})
-@EnableFeignClients(basePackages= {"openfeign"})
+//@EnableFeignClients(basePackages= {"openfeign"})
 public class SpilcaRest2Application {
 
 	public static void main(String[] args) {

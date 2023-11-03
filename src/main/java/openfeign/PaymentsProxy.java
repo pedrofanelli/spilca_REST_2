@@ -16,7 +16,7 @@ import models.Payment;
  * Remember this is an INTERFACE, it's not implemented, that's automatic
  * Also, we will need a Configuration Class for this.
  */
-@FeignClient(name = "payments", url = "${name.service.url}") // from .properties
+//@FeignClient(name = "payments", url = "${name.service.url}") // from .properties
 public interface PaymentsProxy {
 
 	@PostMapping("/apipayment")
